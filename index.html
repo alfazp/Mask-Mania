@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Mask Mania</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div id="app">
+
+<!-- MENU -->
+<section id="menu" class="screen active">
+    <div class="menu-mask">
+        <img id="menuMask" src="assets/masks/mask1.png">
+    </div>
+    <br>
+    <h1 class="title">Mask Mania</h1><br>
+    <button id="playBtn">PLAY</button>
+    <div class="credit">
+        <p>Credit to</p>
+        <p>ChatGPT</p>
+        <p>Pixabay ( Openclipart-Vectors , GameAudio )</p>
+        <p>NUON</p>
+        <p>Canva</p>
+        <p>Google</p>
+    </div>
+</section>
+
+<!-- MODE SELECTION -->
+<section id="modeSelect" class="screen">
+    <h2>Pilih Mode</h2>
+    <div class="mode-buttons">
+        <button id="modeGambling">Intuition Path</button>
+        <button id="modeTikus">Whack A Mask</button>
+    </div>
+    <button class="backBtn">BACK</button>
+</section>
+
+<!-- HOW TO PLAY -->
+<section id="howto" class="screen">
+    <h2>How To Play</h2>
+    <div id="howtoText"></div>
+    <button id="startGameBtn">START</button>
+    <button class="backBtn"> BACK </button>
+</section>
+
+<!-- GAME -->
+<section id="game" class="screen">
+
+<div class="hud">
+   <button class="backBtn"><</button></button>
+    <div>Score: <span id="scoreText">0</span></div>
+    <div>High Score: <span id="highScoreText">0</span></div>
+    <div>Time: <span id="timeText">60</span></div>
+</div>
+
+<div id="bgLayer"></div>
+
+<!-- TIKUS TANAH -->
+<div id="tikusArea">
+    <div class="grid">
+        <!-- 3x3 holes -->
+        <div class="hole"><img class="tanah1" src="assets/tanah/tanah1.png"><div class="entity"></div><img class="tanah3" src="assets/tanah/tanah3.png"><img class="tanah2" src="assets/tanah/tanah2.png"></div>
+        <div class="hole"><img class="tanah1" src="assets/tanah/tanah1.png"><div class="entity"></div><img class="tanah3" src="assets/tanah/tanah3.png"><img class="tanah2" src="assets/tanah/tanah2.png"></div>
+        <div class="hole"><img class="tanah1" src="assets/tanah/tanah1.png"><div class="entity"></div><img class="tanah3" src="assets/tanah/tanah3.png"><img class="tanah2" src="assets/tanah/tanah2.png"></div>
+
+        <div class="hole"><img class="tanah1" src="assets/tanah/tanah1.png"><div class="entity"></div><img class="tanah3" src="assets/tanah/tanah3.png"><img class="tanah2" src="assets/tanah/tanah2.png"></div>
+        <div class="hole"><img class="tanah1" src="assets/tanah/tanah1.png"><div class="entity"></div><img class="tanah3" src="assets/tanah/tanah3.png"><img class="tanah2" src="assets/tanah/tanah2.png"></div>
+        <div class="hole"><img class="tanah1" src="assets/tanah/tanah1.png"><div class="entity"></div><img class="tanah3" src="assets/tanah/tanah3.png"><img class="tanah2" src="assets/tanah/tanah2.png"></div>
+
+        <div class="hole"><img class="tanah1" src="assets/tanah/tanah1.png"><div class="entity"></div><img class="tanah3" src="assets/tanah/tanah3.png"><img class="tanah2" src="assets/tanah/tanah2.png"></div>
+        <div class="hole"><img class="tanah1" src="assets/tanah/tanah1.png"><div class="entity"></div><img class="tanah3" src="assets/tanah/tanah3.png"><img class="tanah2" src="assets/tanah/tanah2.png"></div>
+        <div class="hole"><img class="tanah1" src="assets/tanah/tanah1.png"><div class="entity"></div><img class="tanah3" src="assets/tanah/tanah3.png"><img class="tanah2" src="assets/tanah/tanah2.png"></div>
+    </div>
+</div>
+
+<!-- GAMBLING -->
+<div id="gamblingArea"><div id="maskContainer"></div></div>
+
+</section>
+
+<!-- GAMEOVER -->
+<section id="gameover" class="screen">
+    <h2>Game Over</h2>
+    <p>Score: <span id="finalScore">0</span></p>
+    <button id="retryBtn">Retry</button>
+    <button id="backMenuBtn">Back To Menu</button>
+</section>
+
+</div>
+<script src="game.js"></script>
+</body>
+</html>
